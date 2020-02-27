@@ -1,0 +1,24 @@
+{
+    "name": "nathanday/module-wishlist-dropdown",
+    "description": "Add Wishlist as Menu Dropdown",
+    "type": "magento2-module",
+    "license": [
+        "proprietary"
+    ],
+    "authors":[
+        {
+            "name":"Nathan Day",
+            "email":"nathanday92@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "NathanDay\\WishlistDropdown\\": ""
+        }
+    }
+}
