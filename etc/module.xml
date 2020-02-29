@@ -2,6 +2,9 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
     <module name="NathanDay_WishlistDropdown">
-        <sequence />
+        <sequence>
+            <module name="NathanDay_Core" />
+            <module name="Magento_Wishlist" />
+        </sequence>
     </module>
 </config>

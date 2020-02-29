@@ -12,6 +12,8 @@
         }
     ],
     "require": {
+        "nathanday/module-core": "*",
+        "magento/module-wishlist": "101.*"
     },
     "autoload": {
         "files": [
