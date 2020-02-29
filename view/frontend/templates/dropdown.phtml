@@ -1,0 +1,41 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var $block Magento\Wishlist\Block\Link */
+?>
+
+<div data-block="wishlist" class="wishlist-wrapper">
+    <a <?= /* @noEscape */ $block->getLinkAttributes(); ?>
+       data-bind="scope: 'wishlist'"
+       data-mage-init='{"dropdown":{}}'
+       data-toggle="block-wishlist"
+       aria-haspopup="true"
+    >
+        <span class="text"><?= $block->escapeHtml($block->getLabel()); ?></span>
+        <!-- ko if: wishlist().counter -->
+        <span data-bind="text: wishlist().items.length" class="counter qty">
+        </span>
+        <!-- /ko -->
+    </a>
+    <ul class="dropdown block-wishlist"
+        data-bind="scope: 'wishlist'">
+        <?= $block->getChildHtml('wishlist.items'); ?>
+        <li class="wishlist-promotion"><?= $block->getChildHtml('wishlist.promotion'); ?></li>
+    </ul>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "wishlist": {
+                        "component": "Magento_Wishlist/js/view/wishlist"
+                    }
+                }
+            }
+        }
+    }
+</script>

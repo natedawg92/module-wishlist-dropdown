@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="wish-list-link" template="NathanDay_WishlistDropdown::dropdown.phtml">
+            <arguments>
+                <argument name="class" xsi:type="string">action wishlist</argument>
+            </arguments>
+            <block class="Magento\Wishlist\Block\Customer\Sidebar"
+                   name="wishlist.items"
+                   template="NathanDay_WishlistDropdown::list.phtml" />
+            <container name="wishlist.promotion" label="Wishlist Dropdown Promotion Block" />
+        </referenceBlock>
+        <move element="wish-list-link" destination="header-wrapper" before="minicart" />
+    </body>
+</page>
