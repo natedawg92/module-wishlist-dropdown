@@ -1,0 +1,98 @@
+.wishlist-wrapper-mobile {
+    border-top: 1px solid #d1d1d1;
+    font-size: 1.6rem;
+    list-style: none;
+
+    .action.wishlist {
+        @include lib-icon-font(
+            $icon-wishlist-empty,
+            $_icon-font-size: 35px,
+            $_icon-font-line-height: 22px
+        );
+        @include lib-icon-font(
+            $_icon-font-content  : $icon-down,
+            $_icon-font-size     : 42px,
+            $_icon-font-position : after,
+            $_icon-font-display  : block
+        );
+        position: relative;
+
+        &:after {
+            position: absolute;
+            right: 7px;
+            top: -8px;
+        }
+
+        &.active {
+            @include lib-icon-font(
+                $_icon-font-content  : $icon-up,
+                $_icon-font-size     : 42px,
+                $_icon-font-position : after,
+                $_icon-font-display  : block
+            );
+        }
+
+        .counter.qty {
+            display: none;
+        }
+    }
+
+    .block-wishlist {
+        display: none;
+        list-style: none;
+        padding: 0 20px;
+
+        .product-item-info {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+            .product-image-wrapper {
+                padding-bottom: 0 !important;
+            }
+
+            .product-item-photo {
+                max-width: 100px;
+                padding: 0;
+                width: 35%;
+
+                &:hover {
+                    padding: 0;
+                }
+            }
+
+            .product-item-details {
+                flex-grow: 1;
+                max-width: 250px;
+                width: 65%;
+
+                a {
+                    padding: 0;
+                }
+            }
+
+            .product-item-actions {
+                display: block;
+                flex-grow: 1;
+                margin-top: 10px;
+
+                .actions-primary,
+                .actions-secondary {
+                    display: block;
+
+                    button,
+                    .button {
+                        width: 100%;
+                        max-width: 350px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.active {
+        .block-wishlist {
+            display: block;
+        }
+    }
+}

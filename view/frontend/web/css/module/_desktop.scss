@@ -1,0 +1,75 @@
+.wishlist-wrapper {
+    @include lib-dropdown(
+        $_toggle-selector                     : '.action.wishlist',
+        $_options-selector                    : '.block-wishlist',
+        $_dropdown-toggle-icon-content        : $icon-wishlist-empty,
+        $_dropdown-toggle-active-icon-content : $icon-wishlist-full,
+        $_dropdown-list-item-padding          : false,
+        $_dropdown-list-item-hover            : false,
+        $_dropdown-list-pointer-position      : right,
+        $_icon-font-position                  : before,
+        $_icon-font-size                      : 35px,
+        $_icon-font-line-height               : 33px,
+        $_icon-font-color                     : $icon-font__color,
+        $_icon-font-color-hover               : $icon-font__color-hover,
+        $_icon-font-color-active              : $icon-font__color
+    );
+    display: none;
+    float: right;
+
+    @include min-screen($screen__m) {
+        display: block;
+    }
+
+
+    .block-wishlist {
+        padding: 25px 20px;
+        right: 0;
+        width: 320px;
+        z-index: 101;
+
+        .product-item {
+            .product-image-wrapper {
+                padding-bottom: 0 !important;
+            }
+
+            .product-item-info {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-template-areas:
+                    "image details"
+                    "image actions";
+                width: 100%;
+
+                .product-item-photo {
+                    grid-area: image;
+                }
+
+                .product-item-details {
+                    grid-area: details;
+
+                    .price-box {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .product-item-actions {
+                    display: flex;
+                    flex-direction: column;
+                    grid-area: actions;
+                    width: 100%;
+
+                    .actions-primary,
+                    .actions-secondary {
+                        display: block;
+
+                        button,
+                        .button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
