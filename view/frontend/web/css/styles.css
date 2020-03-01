@@ -85,7 +85,7 @@
       flex-wrap: wrap;
       width: 100%; }
       .wishlist-wrapper-mobile .block-wishlist .product-item-info .product-image-wrapper {
-        padding-bottom: 0 !important; }
+        padding-bottom: 100% !important; }
       .wishlist-wrapper-mobile .block-wishlist .product-item-info .product-item-photo {
         max-width: 100px;
         padding: 0;
@@ -237,7 +237,7 @@
     width: 320px;
     z-index: 101; }
     .wishlist-wrapper .block-wishlist .product-item .product-image-wrapper {
-      padding-bottom: 0 !important; }
+      padding-bottom: 100% !important; }
     .wishlist-wrapper .block-wishlist .product-item .product-item-info {
       display: grid;
       grid-template-columns: 1fr 2fr;
