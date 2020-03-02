@@ -24,7 +24,7 @@ $wishlistHelper = $this->helper(\Magento\Wishlist\Helper\Data::class);
             <!-- ko if: product_is_saleable_and_visible -->
             <div class="actions-primary">
                 <!-- ko if: product_has_required_options -->
-                <a href="#" data-bind="attr: {'data-post': add_to_cart_params}" class="action tocart primary">
+                <a href="#" data-bind="attr: {'data-post': add_to_cart_params}" class="action button tocart primary">
                     <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
                 </a>
                 <!-- /ko -->
@@ -37,13 +37,6 @@ $wishlistHelper = $this->helper(\Magento\Wishlist\Helper\Data::class);
                 <!-- /ko -->
             </div>
             <!-- /ko -->
-            <div class="actions-secondary">
-                <a href="#"  data-bind="attr: {'data-post': delete_item_params}"
-                   title="<?= $block->escapeHtmlAttr(__('Remove This Item')) ?>"
-                   class="btn-remove action delete">
-                    <span><?= $block->escapeHtml(__('Remove This Item')) ?></span>
-                </a>
-            </div>
         </div>
     </div>
 </li>

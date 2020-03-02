@@ -40,50 +40,69 @@
     .block-wishlist {
         display: none;
         list-style: none;
+        margin-bottom: 0;
         padding: 0 20px;
 
-        .product-item-info {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
+        .action.details {
+            padding: 8px 0;
+        }
 
-            .product-image-wrapper {
-                padding-bottom: 100% !important;
-            }
+        li.product-item {
+            margin-bottom: 10px;
 
-            .product-item-photo {
-                max-width: 100px;
-                padding: 0;
-                width: 35%;
+            .product-item-info {
+                display   : flex;
+                flex-wrap : wrap;
+                width     : 100%;
 
-                &:hover {
-                    padding: 0;
+                .product-image-wrapper {
+                    padding-bottom : 100% !important;
                 }
-            }
 
-            .product-item-details {
-                flex-grow: 1;
-                max-width: 250px;
-                width: 65%;
+                .product-item-photo {
+                    max-width : 100px;
+                    padding   : 0;
+                    width     : 35%;
 
-                a {
-                    padding: 0;
+                    &:hover {
+                        padding : 0;
+                    }
                 }
-            }
 
-            .product-item-actions {
-                display: block;
-                flex-grow: 1;
-                margin-top: 10px;
+                .product-item-details {
+                    flex-grow : 1;
+                    max-width : 250px;
+                    width     : 65%;
 
-                .actions-primary,
-                .actions-secondary {
-                    display: block;
+                    a {
+                        padding : 0;
+                    }
 
-                    button,
-                    .button {
-                        width: 100%;
-                        max-width: 350px;
+                    .price-box {
+                        margin: 5px 0 0;
+                    }
+                }
+
+                .product-item-actions {
+                    display    : block;
+                    flex-grow  : 1;
+                    margin-top : 10px;
+
+                    .actions-primary,
+                    .actions-secondary {
+                        display : block;
+
+                        a,
+                        button,
+                        .button {
+                            border-radius: 3px;
+                            color     : #ffffff;
+                            font-weight: 700;
+                            max-width : 350px;
+                            padding: 8px 20px;
+                            text-align: center;
+                            width     : 100%;
+                        }
                     }
                 }
             }
