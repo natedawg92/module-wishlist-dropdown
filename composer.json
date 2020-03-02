@@ -22,5 +22,6 @@
         "psr-4": {
             "NathanDay\\WishlistDropdown\\": ""
         }
-    }
+    },
+    "version": "1.0.0"
 }
